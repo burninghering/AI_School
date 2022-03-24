@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>WEB</title>
-        <style>
-            h1{
-                border-bottom:10px solid green;
-                padding:30px;
-            }
-            #container{
-                display:grid;
-                grid-template-columns: 200px 1fr;
-            }
-        </style>
+        <title>web</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <input type="button" value="night" onclick="
+            document.querySelector('body').style.backgroundColor = '#000F08';
+            document.querySelector('body').style.color = '#F4FFF8';
+        ">
         <h1><a href="index.html">web</a></h1>
         <div id="container">
             <ol>
@@ -23,7 +18,7 @@
             </ol>
             <div>
                 <h2>Welcome</h2>
-                Hello, WEB'
+                Hello, WEB.
             </div>
         </div>
     </body>
