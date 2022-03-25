@@ -8,9 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    <input type="button" value="night" onclick="
+    <body>
+
+    <!-- <input type="button" value="night" onclick="
         let btn = this;
         if(btn.value === 'night'){
             document.querySelector('body').style.backgroundColor = 'black';
@@ -29,7 +30,7 @@
             document.querySelector('#a3').style.color = 'black';
             document.querySelector('#a4').style.color = 'black';
         }
-    ">
+    "> -->
 
     <h1><a id="a1" href="index.html">WEB</a></h1>
     <div id="container">
@@ -43,7 +44,39 @@
             Hello <a href="http://info.cern.ch/hypertext/WWW/TheProject.html">WEB</a>
         </div>
     </div>
+    <script>
+        function night(){
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            
+            let as=document.querySelectorAll('a');
+            for(let i=0;i<as.length;i++){
+                as[i].style.color='white';
+            }
+        }
 
+        function day(){
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            
+            let as=document.querySelectorAll('a');
+            for(let i=0;i<as.length;i++){
+                as[i].style.color='black';
+            }
+        }
+    </script>
 
-</body>
+    <input type="button" value="night" onclick="
+        let btn2 = this;
+        if(btn2.value === 'night'){
+                night();
+                btn2.value = 'day';
+
+        } else {
+            day();
+        }
+        btn2.value = 'night';
+    ">
+
+    </body>
 </html>
