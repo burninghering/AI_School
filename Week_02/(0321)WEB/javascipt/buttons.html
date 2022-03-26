@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <script>
+        var tag = '';
+        for(var i=0; i<2000; i++){
+        tag = tag + `<input type="button" onclick="        
+        this.style.backgroundColor='red';
+        " value="${i}">`
+        }
+        document.write(tag);
+        </script>
+
+
+        <script>
+        let inputs=document.querySelectorAll('input');
+        for(let i=0; i<inputs.length; i++){
+        if(inputs[i].value>100){
+            if(inputs[i].value<200){
+                inputs[i].click();
+        }
+    }
+}
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+    <body>
+        <h1>Function</h1>
+        
+        <script>
+            function abc(){
+                console.log('a');
+                console.log('b');
+                console.log('c');
+            }
+            abc();  
+        </script>      
+
+
+
+        <h1>VAT</h1>
+        <script>
+            let 가격 = 1000;
+            let 부가세율 = 0.1;
+            let 부가세=가격*부가세율;
+            console.log(부가세);
+
+        function vat(가격,부가세율){ //매개변수, parameter
+            let 부가세=가격*부가세율;
+            console.log(부가세);
+            return 부가세;
+        }
+        
+        vat(2000,0.1); //인자, argument, 입력값
+        </script>
+
+        <h1>SUM</h1>
+        <script>
+            function sum(val1,val2){
+                return val1+val2;
+            }  
+            alert(sum(100,200));
+        </script>
+    </body>
+</html>
