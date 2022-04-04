@@ -8,8 +8,7 @@ topics = [
   {"id":2, "title":"css", "body":"css is ...."},
   {"id":3, "title":"js", "body":"js is ...."}
 ]
-
-
+#topics를 db에 넣어서 
 def template(content, id=None):
   contextUI = ''
   if id != None:
