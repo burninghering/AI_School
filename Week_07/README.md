@@ -3,4 +3,9 @@
 - 0425(월) : AI School I 편 (머신러닝) ver2, 1~7강<br>
 - 0426(화) : AI School I 편 (머신러닝) ver2, 8~11강 - 끝<br>
 https://khr5830.tistory.com/156 <br>
+- 0427(수) : AI-900 머신 러닝 학습, Introduction to AI, Machine Learning<br>
+
+
+
+
 
