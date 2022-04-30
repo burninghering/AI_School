@@ -6,6 +6,7 @@ https://khr5830.tistory.com/156 <br>
 - 0427(수) : AI-900 머신 러닝 학습, Introduction to AI, Machine Learning<br>
 - 0428(목) : AI-900 Computer Vision<br>
 - 0429(금) : AI-900 Natural Language Processing<br>
+- 0430(토) : AI-900 문제 풀이
 
 
 
