@@ -1,0 +1,1 @@
+<annotation><size><width>1280</width><height>720</height></size><object><label>bump_injury</label><bnd_box><xmin>587</xmin><xmax>615</xmax><ymin>142</ymin><ymax>162</ymax></bnd_box></object><object><label>car_mark</label><bnd_box><xmin>452</xmin><xmax>559</xmax><ymin>426</ymin><ymax>492</ymax></bnd_box></object></annotation>
