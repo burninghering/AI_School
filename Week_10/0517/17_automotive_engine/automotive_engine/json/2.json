@@ -1,0 +1,93 @@
+{
+	"shapes": [
+		{
+			"label": "bump_injury",
+			"line_color": null,
+			"fill_color": null,
+			"points": [
+				[
+					436.875,
+					396.25
+				],
+				[
+					424.375,
+					401.875
+				],
+				[
+					425.625,
+					415.625
+				],
+				[
+					435.0,
+					421.25
+				]
+			],
+			"shape_type": "polygon",
+			"flags": {}
+		},
+		{
+			"label": "car_mark",
+			"line_color": null,
+			"fill_color": null,
+			"points": [
+				[
+					488.75,
+					145.0
+				],
+				[
+					570.0,
+					145.625
+				],
+				[
+					576.25,
+					213.75
+				],
+				[
+					470.0,
+					213.125
+				]
+			],
+			"shape_type": "polygon",
+			"flags": {}
+		},
+		{
+			"label": "car_mark",
+			"line_color": null,
+			"fill_color": null,
+			"points": [
+				[
+					458.125,
+					474.375
+				],
+				[
+					557.5,
+					476.25
+				],
+				[
+					563.125,
+					564.375
+				],
+				[
+					483.125,
+					563.75
+				]
+			],
+			"shape_type": "polygon",
+			"flags": {}
+		}
+	],
+	"lineColor": [
+		0,
+		255,
+		0,
+		128
+	],
+	"fillColor": [
+		255,
+		0,
+		0,
+		128
+	],
+	"imageHeight": 720,
+	"imageWidth": 1280
+}
