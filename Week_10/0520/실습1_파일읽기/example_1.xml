@@ -1,0 +1,333 @@
+<annotation><version>1.1</version>
+  <meta>
+    <task>
+      <id>1724</id>
+      <name>train nonflat 10</name>
+      <size>44</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker />
+      <created>2021-09-27 06:23:42.815788+00:00</created>
+      <updated>2021-09-29 09:46:39.452156+00:00</updated>
+      <start_frame>0</start_frame>
+      <stop_frame>43</stop_frame>
+      <frame_filter />
+      <labels>
+        <label>
+          <name>talus_top</name>
+          <color>#d5de38</color>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>talus_bottom</name>
+          <color>#84aa78</color>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>metatarsus_root</name>
+          <color>#063b3e</color>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>metatarsus_end</name>
+          <color>#ab55fa</color>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>talus</name>
+          <color>#1993fc</color>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>metatarsus</name>
+          <color>#3412e0</color>
+          <attributes>
+          </attributes>
+        </label>
+      </labels>
+      <segments>
+        <segment>
+          <id>1671</id>
+          <start>0</start>
+          <stop>43</stop>
+          <url>http://infinyx.iptime.org:8080/?id=1671</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>leesj</username>
+        <email />
+      </owner>
+      <assignee />
+    </task>
+    <dumped>2021-09-30 00:15:18.693734+00:00</dumped>
+  </meta>
+  <image id="0" name="hfyuemgw.png" width="1814" height="1450">
+    <polyline label="metatarsus" occluded="0" source="manual" points="1355.62,1160.38;1046.50,1011.50" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="758.00,943.10;477.50,792.00" z_order="0">
+    </polyline>
+  </image>
+<image id="1" name="odrhhvzl.png" width="1814" height="1450">
+    <polyline label="talus" occluded="0" source="manual" points="1113.50,1013.60;1357.30,831.80" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="509.20,1219.60;879.40,1051.10" z_order="0">
+    </polyline>
+  </image>
+  <image id="2" name="egrcfljx.png" width="2176" height="1814">
+    <polyline label="talus" occluded="0" source="manual" points="809.80,1210.20;459.50,990.90" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="1588.71,1446.30;1176.27,1252.68" z_order="0">
+    </polyline>
+  </image>
+  <image id="3" name="rbssxwkl.png" width="2176" height="1814">
+    <polyline label="metatarsus" occluded="0" source="manual" points="561.54,1452.20;963.13,1254.66" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="1323.00,1216.00;1656.90,1010.80" z_order="0">
+    </polyline>
+  </image>
+  <image id="4" name="ojzadbmy.png" width="2358" height="1814">
+    <polyline label="talus" occluded="0" source="manual" points="906.40,1170.90;553.00,979.20" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="1744.39,1452.47;1278.99,1262.31" z_order="0">
+    </polyline>
+  </image>
+  <image id="5" name="kaumyzgn.png" width="2358" height="1814">
+    <polyline label="talus" occluded="0" source="manual" points="1463.20,1132.60;1804.80,920.80" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="625.14,1450.03;1070.15,1218.48" z_order="0">
+    </polyline>
+  </image>
+  <image id="6" name="gdwjfqva.png" width="2176" height="1652">
+    <polyline label="talus" occluded="0" source="manual" points="868.80,1041.00;518.50,839.60" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="1634.60,1308.70;1261.40,1148.16" z_order="0">
+    </polyline>
+  </image>
+  <image id="7" name="rvracjgz.png" width="2176" height="1620">
+    <polyline label="talus" occluded="0" source="manual" points="1327.70,988.80;1669.20,797.00" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="544.12,1243.13;919.13,1064.47" z_order="0">
+    </polyline>
+  </image>
+  <image id="8" name="jjelruay.png" width="1776" height="1417">
+    <polyline label="metatarsus" occluded="0" source="manual" points="1309.13,1010.30;1036.10,901.50" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="787.00,833.70;549.48,706.21" z_order="0">
+    </polyline>
+  </image>
+  <image id="9" name="verjckrn.png" width="1776" height="1417">
+    <polyline label="metatarsus" occluded="0" source="manual" points="507.60,939.10;785.10,827.70" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="1041.70,800.30;1317.20,640.30" z_order="0">
+    </polyline>
+  </image>
+  <image id="10" name="bpijvypg.png" width="2168" height="1806">
+    <polyline label="metatarsus" occluded="0" source="manual" points="1546.40,1363.30;1036.60,1164.30" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="794.70,1177.20;529.50,953.60" z_order="0">
+    </polyline>
+  </image>
+  <image id="11" name="qxqhnisw.png" width="2168" height="1806">
+    <polyline label="talus" occluded="0" source="manual" points="1347.20,1202.60;1614.90,986.30" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="575.70,1378.50;1086.20,1159.30" z_order="0">
+    </polyline>
+  </image>
+  <image id="12" name="mtvxzqbn.png" width="2136" height="1777">
+    <polyline label="metatarsus" occluded="0" source="manual" points="1536.00,1386.50;1190.80,1219.50" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="856.60,1134.10;564.20,932.15" z_order="0">
+    </polyline>
+  </image>
+  <image id="13" name="tggdnnwj.png" width="2136" height="1777">
+    <polyline label="metatarsus" occluded="0" source="manual" points="560.44,1399.12;894.90,1211.80" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="1233.00,1121.40;1546.27,959.36" z_order="0">
+    </polyline>
+  </image>
+  <image id="14" name="bffczmko.png" width="2540" height="1994">
+    <polyline label="metatarsus" occluded="0" source="manual" points="1741.80,1585.84;1338.06,1423.58" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="958.10,1313.60;627.00,1121.02" z_order="0">
+    </polyline>
+  </image>
+  <image id="15" name="chfzuxsw.png" width="2540" height="1994">
+    <polyline label="talus" occluded="0" source="manual" points="1502.40,1333.60;1835.08,1126.56" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="697.69,1582.31;1091.40,1408.92" z_order="0">
+    </polyline>
+  </image>
+  <image id="16" name="qrdmiabj.png" width="2132" height="1778">
+    <polyline label="metatarsus" occluded="0" source="manual" points="1504.16,1314.59;1202.81,1186.22" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="851.90,1117.20;564.52,951.47" z_order="0">
+    </polyline>
+  </image>
+  <image id="17" name="hhjgdfcn.png" width="2132" height="1778">
+    <polyline label="metatarsus" occluded="0" source="manual" points="561.51,1341.42;881.51,1187.38" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="1234.30,1100.20;1545.30,937.20" z_order="0">
+    </polyline>
+  </image>
+  <image id="18" name="blyhtxsk.png" width="2492" height="1955">
+    <polyline label="talus" occluded="0" source="manual" points="962.10,1291.90;601.12,1076.12" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="1763.16,1636.54;1321.10,1395.80" z_order="0">
+    </polyline>
+  </image>
+  <image id="19" name="yxcohofy.png" width="2492" height="1955">
+    <polyline label="talus" occluded="0" source="manual" points="1549.70,1226.10;1917.90,1042.10" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="745.49,1598.55;1271.30,1335.70" z_order="0">
+    </polyline>
+  </image>
+  <image id="20" name="fmsofrcg.png" width="2136" height="1777">
+    <polyline label="talus" occluded="0" source="manual" points="922.20,1163.80;612.00,1000.20" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="1613.46,1368.67;1229.70,1220.80" z_order="0">
+    </polyline>
+  </image>
+  <image id="21" name="vspysbms.png" width="2136" height="1777">
+    <polyline label="talus" occluded="0" source="manual" points="1265.10,1212.00;1567.10,1019.70" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="560.70,1408.47;910.29,1271.53" z_order="0">
+    </polyline>
+  </image>
+  <image id="22" name="kpvuustr.png" width="2136" height="1777">
+    <polyline label="talus" occluded="0" source="manual" points="840.10,1024.40;558.90,856.60" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="1519.90,1266.10;1132.10,1097.20" z_order="0">
+    </polyline>
+  </image>
+  <image id="23" name="qiulhipr.png" width="2136" height="1777">
+    <polyline label="talus" occluded="0" source="manual" points="1240.40,969.40;1538.90,795.80" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="549.38,1213.69;955.11,1043.57" z_order="0">
+    </polyline>
+  </image>
+  <image id="24" name="fosgopvk.png" width="2176" height="1632">
+    <polyline label="talus" occluded="0" source="manual" points="887.00,1096.60;617.77,957.69" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="1552.47,1302.71;1196.05,1173.05" z_order="0">
+    </polyline>
+  </image>
+  <image id="25" name="jdmgpmxa.png" width="2176" height="1638">
+    <polyline label="metatarsus" occluded="0" source="manual" points="630.54,1298.29;991.86,1142.79" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="1308.20,1071.80;1596.88,927.18" z_order="0">
+    </polyline>
+  </image>
+  <image id="26" name="bwvbjdss.png" width="1814" height="1450">
+    <polyline label="metatarsus" occluded="0" source="manual" points="1312.90,1198.40;963.10,1022.00" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="715.90,1018.40;497.97,809.60" z_order="0">
+    </polyline>
+  </image>
+  <image id="27" name="yjyvlzkx.png" width="1814" height="1450">
+    <polyline label="talus" occluded="0" source="manual" points="1135.90,1018.10;1341.70,802.70" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="524.70,1205.10;865.80,1008.40" z_order="0">
+    </polyline>
+  </image>
+  <image id="28" name="sycllpck.png" width="1780" height="1421">
+    <polyline label="talus" occluded="0" source="manual" points="665.10,909.80;434.38,720.33" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="1276.44,1071.98;979.20,969.95" z_order="0">
+    </polyline>
+  </image>
+  <image id="29" name="etxfbjme.png" width="1780" height="1421">
+    <polyline label="metatarsus" occluded="0" source="manual" points="508.72,1079.05;863.90,918.00" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="1106.40,884.10;1350.79,721.96" z_order="0">
+    </polyline>
+  </image>
+  <image id="30" name="olomrqqt.png" width="2176" height="1814">
+    <polyline label="metatarsus" occluded="0" source="manual" points="1503.30,1485.50;1022.80,1377.80" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="931.60,1131.60;584.09,1069.03" z_order="0">
+    </polyline>
+  </image>
+  <image id="31" name="pldjgacs.png" width="2176" height="1814">
+    <polyline label="metatarsus" occluded="0" source="manual" points="767.90,1467.40;1188.80,1391.30" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="1267.50,1141.30;1587.40,1050.90" z_order="0">
+    </polyline>
+  </image>
+  <image id="32" name="jxcjmwas.png" width="1814" height="1450">
+    <polyline label="talus" occluded="0" source="manual" points="732.90,928.50;491.93,788.78" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="1270.67,1121.24;960.10,988.20" z_order="0">
+    </polyline>
+  </image>
+  <image id="33" name="tvhycufc.png" width="1814" height="1450">
+    <polyline label="metatarsus" occluded="0" source="manual" points="517.40,1122.28;823.10,987.00" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="1097.40,924.80;1334.32,791.91" z_order="0">
+    </polyline>
+  </image>
+  <image id="34" name="decntpum.png" width="2176" height="1814">
+    <polyline label="metatarsus" occluded="0" source="manual" points="1569.34,1430.56;1167.03,1233.75" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="873.10,1103.80;588.17,916.82" z_order="0">
+    </polyline>
+  </image>
+  <image id="35" name="cfaxtdhb.png" width="2176" height="1814">
+    <polyline label="talus" occluded="0" source="manual" points="1314.00,1085.10;1620.86,923.77" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="613.64,1390.47;1007.99,1177.02" z_order="0">
+    </polyline>
+  </image>
+  <image id="36" name="eiwrfdhb.png" width="1996" height="1450">
+    <polyline label="metatarsus" occluded="0" source="manual" points="1399.97,1101.87;1098.00,967.40" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="825.90,888.70;586.76,746.75" z_order="0">
+    </polyline>
+  </image>
+  <image id="37" name="emkpfeez.png" width="1996" height="1450">
+    <polyline label="metatarsus" occluded="0" source="manual" points="580.77,1099.58;902.90,958.10" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="1164.60,884.30;1405.40,732.30" z_order="0">
+    </polyline>
+  </image>
+  <image id="38" name="fcjvgdqu.png" width="1994" height="1632">
+    <polyline label="talus" occluded="0" source="manual" points="766.60,1122.80;510.90,907.00" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="1420.30,1304.20;1058.70,1145.40" z_order="0">
+    </polyline>
+  </image>
+  <image id="39" name="nqlyuvsm.png" width="1994" height="1632">
+    <polyline label="talus" occluded="0" source="manual" points="1237.90,1103.30;1503.70,919.90" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="554.20,1282.78;901.82,1154.53" z_order="0">
+    </polyline>
+  </image>
+  <image id="40" name="jrfmnwmh.png" width="2176" height="1814">
+    <polyline label="metatarsus" occluded="0" source="manual" points="1526.81,1373.71;1218.68,1274.22" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="929.70,1209.70;660.93,1053.53" z_order="0">
+    </polyline>
+  </image>
+  <image id="41" name="pruewsij.png" width="2176" height="1814">
+    <polyline label="metatarsus" occluded="0" source="manual" points="673.83,1375.04;977.73,1268.91" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="1279.90,1211.40;1540.20,1053.30" z_order="0">
+    </polyline>
+  </image>
+  <image id="42" name="tfvamigv.png" width="2176" height="1814">
+    <polyline label="metatarsus" occluded="0" source="manual" points="1658.99,1449.16;1249.45,1280.56" z_order="0">
+    </polyline>
+    <polyline label="talus" occluded="0" source="manual" points="906.70,1184.70;580.86,1004.88" z_order="0">
+    </polyline>
+  </image>
+  <image id="43" name="mydppyiz.png" width="2176" height="1814">
+    <polyline label="talus" occluded="0" source="manual" points="1250.40,1101.60;1566.10,917.40" z_order="0">
+    </polyline>
+    <polyline label="metatarsus" occluded="0" source="manual" points="519.40,1393.60;921.42,1193.89" z_order="0">
+    </polyline>
+  </image>
+  </annotation>
