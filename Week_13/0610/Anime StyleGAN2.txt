@@ -1,0 +1,220 @@
+%tensorflow_version 1.x
+import tensorflow as tf
+!pip install googledrivedownloader
+
+# Download the code
+%cd /content/
+!git clone https://github.com/NVlabs/stylegan2.git
+%cd /content/stylegan2
+
+!nvcc test_nvcc.cu -o test_nvcc -run
+
+print('Tensorflow version: {}'.format(tf.__version__) )
+!nvidia-smi -L
+print('GPU Identified at: {}'.format(tf.test.gpu_device_name()))
+=====================================================
+import gdown
+gdown.download('https://drive.google.com/u/1/uc?id=1_NUX9_xRGjce1KbCxT4frUsFWctlN4ZC', 'network-tadne.pkl', quiet=False)
+=====================================================
+# Download the model of choice
+import argparse
+import numpy as np
+import PIL.Image
+import dnnlib
+import dnnlib.tflib as tflib
+import re
+import sys
+from io import BytesIO
+import IPython.display
+import numpy as np
+from math import ceil
+from PIL import Image, ImageDraw
+import imageio
+
+import pretrained_networks
+
+import hashlib 
+
+from google_drive_downloader import GoogleDriveDownloader as gdd
+
+network_pkl = "network-tadne.pkl"
+
+print('Loading networks from "%s"...' % network_pkl)
+_G, _D, Gs = pretrained_networks.load_networks(network_pkl)
+noise_vars = [var for name, var in Gs.components.synthesis.vars.items() if name.startswith('noise')]
+=====================================================
+from IPython import display as ipythondisplay
+import io
+import os
+import base64
+from IPython.display import HTML
+
+def show_video(vid):
+  #mp4list = [video
+  #if len(mp4list) > 0:
+  ext = os.path.splitext(vid)[-1][1:]
+  video = io.open(vid, 'r+b').read()
+  #encoded = base64.b64encode(video)
+  ipythondisplay.display(HTML(data='''<video alt="test" autoplay 
+              loop controls style="height: 400px;">
+              <source src="data:video/{1}';base64,{0}" type="video/{1}" />
+              </video>'''.format(base64.b64encode(video).decode('ascii'), ext)))
+=====================================================
+def generate_images(zs, truncation_psi):
+    Gs_kwargs = dnnlib.EasyDict()
+    Gs_kwargs.output_transform = dict(func=tflib.convert_images_to_uint8, nchw_to_nhwc=True)
+    Gs_kwargs.randomize_noise = False
+    if not isinstance(truncation_psi, list):
+        truncation_psi = [truncation_psi] * len(zs)
+        
+    imgs = []
+    for z_idx, z in log_progress(enumerate(zs), size = len(zs), name = "Generating images"):
+        Gs_kwargs.truncation_psi = truncation_psi[z_idx]
+        noise_rnd = np.random.RandomState(1) # fix noise
+        tflib.set_vars({var: noise_rnd.randn(*var.shape.as_list()) for var in noise_vars}) # [height, width]
+        images = Gs.run(z, None, **Gs_kwargs) # [minibatch, height, width, channel]
+        imgs.append(PIL.Image.fromarray(images[0], 'RGB'))
+    return imgs
+
+def generate_zs_from_seeds(seeds):
+    zs = []
+    for seed_idx, seed in enumerate(seeds):
+        rnd = np.random.RandomState(seed)
+        z = rnd.randn(1, *Gs.input_shape[1:]) # [minibatch, component]
+        zs.append(z)
+    return zs
+
+# Generates a list of images, based on a list of seed for latent vectors (Z), and a list (or a single constant) of truncation_psi's.
+def generate_images_from_seeds(seeds, truncation_psi):
+    return generate_images(generate_zs_from_seeds(seeds), truncation_psi)
+
+def imshow(a, format='png', jpeg_fallback=True):
+  a = np.asarray(a, dtype=np.uint8)
+  str_file = BytesIO()
+  PIL.Image.fromarray(a).save(str_file, format)
+  im_data = str_file.getvalue()
+  try:
+    disp = IPython.display.display(IPython.display.Image(im_data))
+  except IOError:
+    if jpeg_fallback and format != 'jpeg':
+      print ('Warning: image was too large to display in format "{}"; '
+             'trying jpeg instead.').format(format)
+      return imshow(a, format='jpeg')
+    else:
+      raise
+  return disp
+  
+def createImageGrid(images, scale=0.25, rows=1):
+   w,h = images[0].size
+   w = int(w*scale)
+   h = int(h*scale)
+   height = rows*h
+   cols = ceil(len(images) / rows)
+   width = cols*w
+   canvas = PIL.Image.new('RGBA', (width,height), 'white')
+   for i,img in enumerate(images):
+     img = img.resize((w,h), PIL.Image.ANTIALIAS)
+     canvas.paste(img, (w*(i % cols), h*(i // cols))) 
+   return canvas
+
+def interpolate(zs, steps):
+   out = []
+   for i in range(len(zs)-1):
+    for index in range(steps):
+     fraction = index/float(steps) 
+     out.append(zs[i+1]*fraction + zs[i]*(1-fraction))
+   return out
+
+# Taken from https://github.com/alexanderkuk/log-progress
+def log_progress(sequence, every=1, size=None, name='Items'):
+    from ipywidgets import IntProgress, HTML, VBox
+    from IPython.display import display
+
+    is_iterator = False
+    if size is None:
+        try:
+            size = len(sequence)
+        except TypeError:
+            is_iterator = True
+    if size is not None:
+        if every is None:
+            if size <= 200:
+                every = 1
+            else:
+                every = int(size / 200)     # every 0.5%
+    else:
+        assert every is not None, 'sequence is iterator, set every'
+
+    if is_iterator:
+        progress = IntProgress(min=0, max=1, value=1)
+        progress.bar_style = 'info'
+    else:
+        progress = IntProgress(min=0, max=size, value=0)
+    label = HTML()
+    box = VBox(children=[label, progress])
+    display(box)
+
+    index = 0
+    try:
+        for index, record in enumerate(sequence, 1):
+            if index == 1 or index % every == 0:
+                if is_iterator:
+                    label.value = '{name}: {index} / ?'.format(
+                        name=name,
+                        index=index
+                    )
+                else:
+                    progress.value = index
+                    label.value = u'{name}: {index} / {size}'.format(
+                        name=name,
+                        index=index,
+                        size=size
+                    )
+            yield record
+    except:
+        progress.bar_style = 'danger'
+        raise
+    else:
+        progress.bar_style = 'success'
+        progress.value = index
+        label.value = "{name}: {index}".format(
+            name=name,
+            index=str(index or '?')
+        )
+=====================================================
+# generate some random seeds
+seeds = np.random.randint(10000000, size=10)
+print(seeds)
+
+# show the seeds
+imshow(createImageGrid(generate_images_from_seeds(seeds, 0.7), 1 , 5))
+=====================================================
+# Simple (Z) interpolation
+zs = generate_zs_from_seeds([757 , 5805 ])
+
+latent1 = zs[0]
+latent2 = zs[1]
+
+number_of_steps = 25
+
+imgs = generate_images(interpolate([latent1,latent2],number_of_steps), 1.0)
+number_of_images = len(imgs)
+imshow(createImageGrid(imgs, 0.7 , 5))
+=====================================================
+# generating a MP4 movie
+
+zs = generate_zs_from_seeds([12362,11501,11523,10313,5805,757,10543,10782,10863,10945,11004,11017,11557,11599,11592,11606,11679,11768,11808,11943,12032,12083,12158,12243,12262,12267,12331,12343])
+
+number_of_steps = 25
+imgs = generate_images(interpolate(zs,number_of_steps), 0.7)
+
+# Example of reading a generated set of images, and storing as MP4.
+%mkdir out
+movieName = 'out/mov.mp4'
+
+with imageio.get_writer(movieName, mode='I') as writer:
+    for image in log_progress(list(imgs), name = "Creating animation"):
+        writer.append_data(np.array(image))
+show_video(movieName)
+=====================================================
+
